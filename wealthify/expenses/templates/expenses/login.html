@@ -13,22 +13,26 @@
             {% if message %}
                 {{message}}
             {% endif %}
-            <form action="{% url 'login' %}" method="post">
+            <form class="login-form" action="{% url 'login' %}" method="post">
                 {% csrf_token %}
 
                 <pre><b>Username       </b><input type="text" name="username" required></pre>
-    
+
                 <pre><b>Password       </b><input type="password" name="password" required></pre><br>
-    
+
                     <input type="submit" value="login">
             </form>
         </center>
 
+        <br><br>
 
-        <!-- Going to SignUp page -->
-        <p>New User <a href="{% url 'signup'%}">SignUp</a> Here</p>
+        <center>
+            <form class="login-form" action="{% url 'signup' %}" target="_blank">
+                <input type="submit" value="SignUp">
+            </form>
+        </center>
 
-    <!-- login/signup  -->
+        <br><br><br><br>
 
 </main>
 {% endblock %}
