@@ -1,0 +1,34 @@
+{% extends 'expenses/index.html' %}
+{% load static %}
+{% block main %}
+    <main>
+
+        <center>
+            <br>
+            <video src="{% static 'expenses/Profile_login.mp4'%}" autoplay loop muted width="40%" height="auto" ></video>
+        </center>
+
+
+        <center>
+            {% if message %}
+                {{message}}
+            {% endif %}
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+
+                <pre><b>Username       </b><input type="text" name="username" required></pre>
+    
+                <pre><b>Password       </b><input type="password" name="password" required></pre><br>
+    
+                    <input type="submit" value="login">
+            </form>
+        </center>
+
+
+        <!-- Going to SignUp page -->
+        <p>New User <a href="{% url 'signup'%}">SignUp</a> Here</p>
+
+    <!-- login/signup  -->
+
+</main>
+{% endblock %}
