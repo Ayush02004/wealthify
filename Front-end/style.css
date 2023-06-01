@@ -260,3 +260,47 @@ form button {
 form button:hover {
     background: #3e8e41;
 }
+
+
+
+
+
+.quote {
+    border-left: 3px solid #333;
+    padding-left: 10px;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.quote cite {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+
+
+
+/* CSS styles for the login form */
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+
+
+
+/* CSS styles for the signup form */
+form.signup-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
