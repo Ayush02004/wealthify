@@ -5,127 +5,233 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binaries_CodingGeeks</title>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.28.0/dist/apexcharts.min.js"></script>
-    <style>
-    #chart {
-    max-width: 400px;
-    margin: 20px auto;
-    }
-    </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'expenses/stylemain.css' %}">
 </head>
 <body>
 
-
     <nav>
         <div class="container">
-            <div class="logo">
-                <img src="Assets\CodeGeeks_logo.png" alt="CodeGeeks_logo" class="logo">
-            </div>
-            <br>
             <ul>
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="Login.html" target="_blank">Login</a></li>
-                <li><a href="SignUp.html" target="_blank">SignUp</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">SignUp</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <h2>Expense Tracker</h2>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+    <h4>Your Balance</h4>
+    <h1 id="balance">$0.00</h1>
+    <div class="inc-exp-container">
+        <div>
+        <h4>Income</h4>
+        <p id="money-plus" class="money-plus">
+            +$0.00
+        </p>
+        </div>
+        <div>
+        <h4>Expense</h4>
+        <p id="money-minus" class="money-minus">
+            -$0.00
+        </p>
+        </div>
+    </div>
 
-<form id="expense-form">
-    <label for="expense-name">Expense Name:</label>
-    <input type="text" id="expense-name" required>
+    <h3>History</h3>
+    <ul id="list" class="list">
+        <!-- <li class="minus">
+        Cash <span>-$400</span
+        ><button class="delete-btn">x</button>
+        </li> -->
+    </ul>
+    <h3>Add New Transition</h3>
+    <form id="form">
+        <div class="form-control">
+            <label for="text">Text</label>
+            <input type="text" id="text" placeholder="Enter Text...."/>
+        </div>
+        <div class="form-control">
+            <label for="amount">Amount <br> (negative - expense ,positive - income )</label>
+            <input type="number" id="amount" placeholder="Enter amount..."> 
+        </div>
+        <button class="btn">All transaction</button>
+    </form>
+    </div>
 
-    <label for="expense-amount">Expense Amount:</label>
-    <input type="number" id="expense-amount" required>
 
-    <button type="submit">Add Expense</button>
-</form>
 
-<table id="expense-table">
-    <thead>
-    <tr>
-        <th>Expense Name</th>
-        <th>Expense Amount</th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
 
-<div id="chart"></div>
 
-<script>
-    // Initialize expense data array
-    let expenses = [];
 
-    // Function to add an expense
-    function addExpense(event) {
-    event.preventDefault();
+    <div class="tip-box">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th class="cell2"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <h2 class="tip-title">How To manage your finances efficiently?</h2>
+        <p class="tip-description">
+            1. Create a budget: Establish a detailed budget that outlines your income and expenses. This will help you track your spending and ensure you are living within your means.
+            <br>
+            2. Set financial goals: Define short-term and long-term financial goals, such as saving for emergencies, retirement, or a down payment on a house. Having clear objectives will keep you focused and motivated.
+            <br>
+            3. Track your expenses: Keep a record of all your expenses to identify areas where you can cut back or make adjustments. This will help you become more mindful of your spending habits.
+            <br>
+            4. Reduce debt: Develop a strategy to pay off high-interest debts, such as credit cards or personal loans. Prioritize debt repayment to avoid unnecessary interest payments.
+            <br>
+            5. Save regularly: Make saving a habit by setting aside a portion of your income each month. Consider automating your savings to ensure consistency.
+            <br>
+            6. Build an emergency fund: Aim to have three to six months' worth of living expenses saved in an emergency fund. This will provide a financial safety net in case of unexpected events or job loss.
+            <br>
+            7. Invest wisely: Educate yourself about different investment options, such as stocks, bonds, or mutual funds. Diversify your portfolio and consider seeking professional advice for long-term investment strategies.
+            <br>
+            8. Review your insurance coverage: Regularly assess your insurance policies, including health, life, home, and auto insurance. Ensure you have adequate coverage without paying for unnecessary extras.
+            <br>
+            9. Avoid impulsive purchases: Before making a purchase, give yourself some time to think it over. Differentiate between needs and wants, and consider the long-term value of the item.
+            <br>
+            10. Continuously educate yourself: Stay informed about personal finance through books, online resources, or financial courses. Enhancing your financial literacy will empower you to make better financial decisions.
+            <br>
+        </p>
+                </td>
+                <td class="cell2">
+                    <video src="{% static 'expenses/manage_suggestion.mp4' %}" autoplay loop muted width="100%" height="auto" ></video>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="tip-title">How to save money wisely?</h2>
+        <p class="tip-description">
+            1. Track your expenses with technology: Utilize budgeting apps or online tools that can automatically categorize your expenses and provide insights into your spending patterns. This can help you identify areas where you can cut back and save more effectively.
+            <br>
+            2. Use cashback and rewards programs: Take advantage of cashback and rewards programs offered by credit cards or retail stores. Make sure to pay off your credit card balance in full each month to avoid interest charges.
+            <br>
+            3. Cook meals at home: Eating out can be expensive, so try to cook meals at home as much as possible. Meal planning, bulk cooking, and bringing lunch to work can significantly reduce your food expenses.
+            <br>
+            4. Comparison shop before making big purchases: Before buying a high-value item, do your research and compare prices from different retailers. Look for sales, discounts, or consider buying used items to save money.
+            <br>
+            5. Negotiate bills and contracts: Don't be afraid to negotiate with service providers such as cable, internet, or insurance companies. You may be able to secure better rates or discounts by simply asking.
+            <br>
+            6. Buy in bulk: Purchase non-perishable items, such as toiletries or cleaning supplies, in bulk. This can often result in significant savings compared to buying individual items.
+            <br>
+            7. Cut unnecessary subscriptions: Review your monthly subscriptions and identify any that you no longer use or find value in. Canceling unused subscriptions can free up extra money for savings.
+            <br>
+            8. Use energy-efficient practices: Reduce your utility bills by implementing energy-efficient practices. Turn off lights and unplug electronics when not in use, use energy-saving bulbs, and consider weatherproofing your home to conserve energy.
+            <br>
+            9. Shop with a list: Make a shopping list before heading to the grocery store or shopping mall. Stick to the list and avoid impulsive purchases, which can add up and derail your savings goals.
+            <br>
+            10. Automate your savings: Set up automatic transfers from your checking account to your savings account each month. By automating your savings, you ensure that money is consistently being put aside without relying on willpower alone.
+            <br>
+        </p>
+                </td>
+                <td class="cell2">
+                    <video src="{% static 'expenses/save_suggestion.mp4' %}" autoplay loop muted width="100%" height="auto" ></video>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="tip-title">How to invest money smartly?</h2>
+        <p class="tip-description">
+            1. Define your investment goals: Clearly establish your investment objectives, whether it's saving for retirement, buying a home, or funding your children's education. Your goals will help determine your investment strategy.
+            <br>
+            2. Diversify your portfolio: Spread your investments across different asset classes, such as stocks, bonds, real estate, and commodities. Diversification helps reduce risk by not putting all your eggs in one basket.
+            <br>
+            3. Understand your risk tolerance: Assess your risk tolerance level before investing. Determine how much volatility you are comfortable with and align your investments accordingly. Generally, riskier investments have the potential for higher returns but also higher losses.
+            <br>
+            4. Research and educate yourself: Take the time to research different investment options and understand how they work. Stay informed about market trends, economic indicators, and company fundamentals. Education is key to making informed investment decisions.
+            <br>
+            5. Consider dollar-cost averaging: Instead of trying to time the market, consider implementing a dollar-cost averaging strategy. Invest a fixed amount of money at regular intervals, regardless of market conditions. This approach can help mitigate the impact of market volatility.
+            <br>
+            6. Keep a long-term perspective: Investing is a long-term endeavor. Avoid making impulsive decisions based on short-term market fluctuations. Stay focused on your long-term goals and resist the urge to react to temporary market movements.
+            <br>
+            7. Seek professional advice when needed: If you're unsure about investing or lack the time and expertise to manage your investments, consider consulting with a financial advisor. They can provide personalized guidance based on your specific circumstances.
+            <br>
+            8. Regularly review and rebalance your portfolio: Periodically assess your investment portfolio to ensure it remains aligned with your goals and risk tolerance. Rebalance your portfolio by selling investments that have performed well and buying more of those that have underperformed to maintain your desired asset allocation.
+            <br>
+            9. Avoid herd mentality: Don't blindly follow the crowd or chase the latest investment fads. Make investment decisions based on careful analysis and your own research rather than succumbing to market hype.
+            <br>
+            10. Be patient and stay disciplined: Investing is a long-term game, and it's important to stay disciplined and patient. Avoid emotional decision-making and stick to your investment strategy, even during periods of market volatility.
+            <br>
+        </p>
+                </td>
+                <td class="cell2">
+                    <video src="{% static 'expenses/invest_suggestion.mp4' %}" autoplay loop muted width="100%" height="auto" ></video>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-    const expenseNameInput = document.getElementById("expense-name");
-    const expenseAmountInput = document.getElementById("expense-amount");
 
-    const expenseName = expenseNameInput.value;
-    const expenseAmount = parseFloat(expenseAmountInput.value);
 
-    if (expenseName && !isNaN(expenseAmount)) {
-        // Add the expense to the array
-        expenses.push({ name: expenseName, amount: expenseAmount });
 
-        // Clear the input fields
-        expenseNameInput.value = "";
-        expenseAmountInput.value = "";
 
-        // Update the table
-        updateTable();
+    <br>
+    <center>
+        <h1>
+            Ask Me Anything...
+        </h1>
+    </center>
+    <br>
+    <div id="chat-container">
+        <div id="chat-display">
+            <div class="chat-message bot">
+                <p>Hello! How can I assist you with your finances today?</p>
+            </div>
+        </div>
+        <div id="user-input">
+            <input type="text" id="user-input-field" placeholder="Type your message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
 
-        // Update the chart
-        updateChart();
-    }
-    }
 
-    // Function to update the expense table
-    function updateTable() {
-    const expenseTable = document.getElementById("expense-table").getElementsByTagName("tbody")[0];
-    expenseTable.innerHTML = "";
 
-    expenses.forEach(expense => {
-        const row = expenseTable.insertRow();
-        const nameCell = row.insertCell(0);
-        const amountCell = row.insertCell(1);
 
-        nameCell.innerHTML = expense.name;
-        amountCell.innerHTML = expense.amount.toFixed(2);
-    });
-    }
 
-    // Function to update the chart
-    function updateChart() {
-    const chartData = expenses.map(expense => ({ x: expense.name, y: expense.amount }));
 
-    const options = {
-        series: [{ data: chartData }],
-        chart: { type: 'bar', height: 350 },
-        xaxis: { type: 'category' },
-    };
+    <br>
+    <center>
+        <h1>
+            Explore more...
+        </h1>
+    </center>
+    <br>
+    <div class="contains">
+        <a href="{% url 'gl' %}">
+            <div class="clickimage">
+                <img src="gl.png" alt="Generate Lead">
+            </div>
+        </a>
 
-    const chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-    }
+        <a href="{% url 'cf' %}">
+        <div class="clickimage">
+            <img src="cf.png" alt="Crowd Fund">
+        </div>
+        </a>
 
-    // Add event listener to the form submission
-    const expenseForm = document.getElementById("expense-form");
-    expenseForm.addEventListener("submit", addExpense);
-</script>
-    </main>
+        <a href="{% url 'd' %}">
+        <div class="clickimage">
+            <img src="donate.jpg" alt="Donation">
+        </div>
+        </a>
+    </div>
+</main>
 
-    <footer>
-        <a>All rights reserved &copy; Binaries_CodingGeeks</a>
-    </footer>
 
-    <script src="script.js"></scr>
+<footer>
+    <a>All rights reserved &copy; Binaries_CodingGeeks</a>
+</footer>
+
+
+
+
+    <script src="{% static 'expenses/scriptmain.js' %}"></script>
 </body>
 </html>

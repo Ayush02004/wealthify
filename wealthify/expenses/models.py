@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class user(models.Model):
     username = models.CharField(max_length=50)
@@ -8,7 +9,7 @@ class user(models.Model):
 
     def __str__(self):
         return f"{self.username} - {self.email}"
-""" 
+"""
 # expenditure class contains emi, transport,food, shopping, recharges/bills,others
 class DailyExpenditures(models.Models):
     #user = models.ForeignKey(user, on_delete=models.CASCADE)
@@ -19,7 +20,7 @@ class DailyExpenditures(models.Models):
 
     def __str__(self):
         return f"EMI{self.EMI} Transport{self.Transport} Food{self.Food} Shopping{self.Shopping} Bills{self.bills} Others{self.Others}"
-    
+
 class MonthlyExpenditures(models.Model):
     EMI = models.IntegerField()
     bills = models.IntegerField()
@@ -28,6 +29,21 @@ class MonthlyExpenditures(models.Model):
 
     def __str__(self):
         return f"EMI{self.EMI} Bills{self.bills} Rent{self.rent} Others{self.others}"
-    
+
 class Income(models.Model):
     income = models.IntegerField()"""
+
+
+
+
+
+
+
+class Expense(models.Model):
+    spend_on = models.CharField(max_length=100)
+    date = models.DateField()
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    essential = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.spend_on
