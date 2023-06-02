@@ -1,4 +1,4 @@
-{% load static %}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +9,6 @@
     <link rel="stylesheet" href="{% static 'expenses/stylemain.css' %}">
 </head>
 <body>
-
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'signup' %}">SignUp</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main>
     <h2>Expense Tracker</h2>
     <div class="container">
@@ -204,25 +193,37 @@
         </h1>
     </center>
     <br>
-    <div class="contains">
-        <a href="{% url 'gl' %}">
+
+
+    <center>
+        <div class="contains">
+            <a href="{% url 'gl' %}">
+                <div class="clickimage">
+                    <img src="{% static 'expenses/gl.png' %}" alt="Generate Lead">
+                </div>
+            </a>
+
+            <a href="{% url 'cf' %}">
             <div class="clickimage">
-                <img src="{% static 'expenses/gl.png' %}" alt="Generate Lead">
+                <img src="{% static 'expenses/cf.png' %}" alt="Crowd Fund">
             </div>
-        </a>
+            </a>
 
-        <a href="{% url 'cf' %}">
-        <div class="clickimage">
-            <img src="{% static 'expenses/cf.png' %}" alt="Crowd Fund">
+            <a href="{% url 'd' %}">
+            <div class="clickimage">
+                <img src="{% static 'expenses/donate.jpg' %}" alt="Donation">
+            </div>
+            </a>
         </div>
-        </a>
+    </center>
 
-        <a href="{% url 'd' %}">
-        <div class="clickimage">
-            <img src="{% static 'expenses/donate.jpg' %}" alt="Donation">
-        </div>
-        </a>
-    </div>
+
+
+
+
+
+
+
 </main>
 
 
