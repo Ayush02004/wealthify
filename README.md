@@ -17,6 +17,7 @@ Run the application:
 4) run command python manage.py runserver
 
 The following images are screenshot of the website:
+
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/27f3e44b-8fe7-45a3-9d5a-e7fdc00b25ea)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/5a9c9620-5e15-4e03-b8d5-9bcca4a4eaaa)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/c0402447-97af-43e1-8c95-c132feb2532e)
