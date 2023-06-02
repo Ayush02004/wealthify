@@ -1,0 +1,15 @@
+{% extends 'expenses/index.html' %}
+{% load static %}
+{% block main %}
+<main>
+    <div class="containergl">
+        <h1>Referral Link Generator</h1>
+        <div id="referral-link-container">
+        <p>Your referral link:</p>
+        <input type="text" id="referral-link" readonly>
+        <button onclick="copyReferralLink()">Copy</button>
+        </div>
+        <p id="click-counter">0 Clicks</p>
+    </div>
+</main>
+{% endblock %}

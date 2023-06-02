@@ -203,3 +203,81 @@ const balance = document.getElementById(
             return response;
         }
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Handle donate link click
+const donateLinks = document.querySelectorAll('.donate-link');
+donateLinks.forEach((link) => {
+link.addEventListener('click', donateToNGO);
+});
+
+function donateToNGO(event) {
+event.preventDefault();
+
+  // Extract NGO information from the clicked element
+const ngoInfo = event.target.parentNode;
+const ngoName = ngoInfo.querySelector('h3').textContent;
+const goal = ngoInfo.querySelector('p').textContent;
+
+  // Perform further processing (e.g., redirect to a donation page)
+
+  // Example: Open a new tab with a donation page URL
+const donationURL = `https://example.com/donate?ngo=${encodeURIComponent(ngoName)}&goal=${encodeURIComponent(goal)}`;
+window.open(donationURL, '_blank');
+}
+
+
+
+
+
+
+
+
+
+
+// for gl
+var clicks = 0;
+
+function generateReferralLink() {
+  // Generate a unique referral link (you can replace this logic with your own implementation)
+var referralLink = "https://example.com/referral/" + Math.random().toString(36).substr(2, 10);
+
+document.getElementById("referral-link").value = referralLink;
+}
+
+function copyReferralLink() {
+var referralLink = document.getElementById("referral-link");
+
+  // Select the referral link text
+referralLink.select();
+referralLink.setSelectionRange(0, 99999);
+
+  // Copy the referral link to the clipboard
+document.execCommand("copy");
+
+  // Change the button text to indicate successful copy
+document.querySelector("button").innerText = "Copied!";
+}
+
+function incrementClickCounter() {
+clicks++;
+document.getElementById("click-counter").innerText = clicks + (clicks === 1 ? " Click" : " Clicks");
+}
+
+// Generate the initial referral link
+generateReferralLink();
+
+// Add event listener for click counter
+document.getElementById("referral-link").addEventListener("click", incrementClickCounter);

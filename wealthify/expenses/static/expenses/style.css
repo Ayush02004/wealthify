@@ -321,4 +321,75 @@ form.signup-form {
 
 
 
+#ngo-list {
+    padding: 20px;
+}
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.ngo-info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.ngo-info:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+.donate-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.donate-link:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for gl*/
+.containergl {
+    text-align: center;
+}
+
+#referral-link-container {
+    margin-bottom: 20px;
+}
+
+#click-counter {
+    font-size: 24px;
+    font-weight: bold;
+}

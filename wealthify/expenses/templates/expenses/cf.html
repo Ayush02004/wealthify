@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Binaries_CodingGeeksps</title>
+<link rel="stylesheet" type="text/css" href="{% static 'expenses/stylecf.css' %}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{% static 'expenses/CodeGeeks_logo.png'%}" alt="CodeGeeks_logo" class="logo">
+    </div>
+    <br><br>
+    <h1>Wealthify</h1>
+    <h1>Crowdfunding for Startups</h1>
+</header>
+
+<section>
+    <h2>Trending Startup Investments Base With Highest Profits</h2>
+    <div id="investment-list">
+    <!-- Investment details will be dynamically added here using JavaScript -->
+    </div>
+</section>
+
+<section>
+    <h2>Upcoming Startups</h2>
+    <div id="startup-list">
+    <!-- Startup information will be dynamically added here using JavaScript -->
+    </div>
+</section>
+
+<section>
+    <h2>Discussion Forum</h2>
+    <div id="forum">
+<!-- Discussion forum will be dynamically added here using JavaScript -->
+    </div>
+
+    <form id="comment-form">
+    <h3>Leave a Comment</h3>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+    </div>
+    <div>
+        <label for="content">Comment:</label>
+        <textarea id="content" required></textarea>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script src="{% static 'expenses/scriptcf.js' %}"></script>
+</body>
+</html>

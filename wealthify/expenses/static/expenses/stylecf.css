@@ -1,0 +1,82 @@
+body {
+    background-color: #0D1117;
+    color: #C9D1D9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161B22;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #58A6FF;
+}
+
+.logo{
+    width: 130px;
+    float: left;
+}
+
+#investment-list,
+#startup-list,
+#forum {
+    background-color: #0D1117;
+    padding: 10px;
+}
+
+#investment-list {
+    border: 1px solid #30363D;
+}
+
+#startup-list,
+#forum {
+    margin-top: 10px;
+    border: 1px solid #30363D;
+}
+
+#investment-list,
+#startup-list,
+#forum {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+  /* Custom styling for discussion forum */
+
+#forum {
+    max-height: 700px;
+}
+
+.forum-post {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #161B22;
+    border: 1px solid #30363D;
+}
+
+.forum-post .post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.forum-post .post-header .username {
+    font-weight: bold;
+    color: #58A6FF;
+}
+
+.forum-post .post-content {
+    color: #C9D1D9;
+}
