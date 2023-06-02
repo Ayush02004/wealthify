@@ -17,7 +17,7 @@ def login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, user)
+            #login(request, user)
             return HttpResponseRedirect(reverse('main'))
         else:
             return render(request, 'expenses/login.html', {'message': 'Invalid credentials'})
@@ -45,8 +45,15 @@ def logout_view(request):
     return render(request,"expenses/login.html",{
         "message": "Logged out",
     })
-"""
-def profile(request):
-    if not request.user.is_authenticated:
-         return HttpResponseRedirect(reverse("login"))
-    return render(request, 'expenses/profile.html')"""
+
+def main(request):
+    """if not request.user.is_authenticated:
+         return HttpResponseRedirect(reverse("login"))"""
+    return render(request, 'expenses/main.html')
+
+def gl(request):
+    return render(request, 'expenses/gl.html')
+def cf(request):
+    return render(request, 'expenses/cf.html')
+def d(request):
+    return render(request, 'expenses/d.html')
