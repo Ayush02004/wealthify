@@ -19,11 +19,12 @@ Run the application:
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/27f3e44b-8fe7-45a3-9d5a-e7fdc00b25ea)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/5a9c9620-5e15-4e03-b8d5-9bcca4a4eaaa)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/c0402447-97af-43e1-8c95-c132feb2532e)
+
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/3e6c96f3-3cce-4252-b759-0033b36f39d1)
+
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/1090683c-083b-42a3-ae16-ec7126705e12)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/5d95c246-a749-4129-bc1c-dacb3fb9e7f9)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/cbecd4f6-cb7b-4944-8e25-e205866d9dc5)
-![image](https://github.com/Ayush02004/wealthify/assets/122443505/cbecd4f6-cb7b-4944-8e25-e205866d9dc5)
-![image](https://github.com/Ayush02004/wealthify/assets/122443505/cbecd4f6-cb7b-4944-8e25-e205866d9dc5)
+
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/2297e5aa-1cac-4fc0-8048-2667c59fec8f)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/931269ec-a9b5-4a99-91f4-83b7fe007349)
