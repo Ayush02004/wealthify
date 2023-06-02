@@ -1,6 +1,6 @@
 # wealthify
 This is a django based web application that tracks you expences and income.
-The home page of this applitcation describes all the things you can do in breif. When you signup in the website you will be redirected to the main page.
+The home page of this application describes all the things you can do in breif. When you signup in the website you will be redirected to the main page.
 
 The main page of this application helps you keep track of your daily expences and arrange them into categories. It also has a chat bot built in which can answer your basic investment related questions.
 
