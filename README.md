@@ -22,7 +22,7 @@ The following images are screenshot of the website:
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/5a9c9620-5e15-4e03-b8d5-9bcca4a4eaaa)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/c0402447-97af-43e1-8c95-c132feb2532e)
 
-![image](https://github.com/Ayush02004/wealthify/assets/122443505/3e6c96f3-3cce-4252-b759-0033b36f39d1)
+![image](https://github.com/Ayush02004/wealthify/assets/122443505/bf352a25-8998-4552-819a-6ea1e108747c)
 
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/1090683c-083b-42a3-ae16-ec7126705e12)
 ![image](https://github.com/Ayush02004/wealthify/assets/122443505/5d95c246-a749-4129-bc1c-dacb3fb9e7f9)
